@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,3 +38,13 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#HTML模板
+gem 'slim'
+#文章编辑器
+gem 'rails_kindeditor'
+# 图片上传功能
+gem 'carrierwave'
+gem 'rmagick'
+
+#分页工具
+gem 'will_paginate'
