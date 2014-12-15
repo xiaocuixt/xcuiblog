@@ -11,6 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141215151209) do
+
+  create_table "articles", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "author"
+    t.string   "tags"
+    t.string   "category"
+    t.string   "image"
+    t.string   "summary"
+    t.integer  "view_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
