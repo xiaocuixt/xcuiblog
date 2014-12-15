@@ -1,0 +1,10 @@
+tr
+  td = article.title
+  td = article.tags
+  td = article.category
+  td = link_to [:admin, article], title: '查看', class: 'btn btn-xs btn-info'
+    i.glyphicon.glyphicon-eye-open
+  td = link_to edit_admin_article_path(article), title: '编辑', class: 'btn btn-xs btn-default'
+    i.glyphicon.glyphicon-pencil
+  td = link_to [:admin, article], title: '删除', method: :delete, data: {confirm: '确定要删除吗？'}, class: 'btn btn-xs btn-danger'
+    i.glyphicon.glyphicon-remove

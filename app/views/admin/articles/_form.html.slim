@@ -1,0 +1,41 @@
+
+= form_for([:admin, @article], html: {class: "form-horizontal"}) do |f|
+  .form-group
+    = f.label :title, '标题', class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :content, '内容', class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :content, class: 'form-control'
+  .form-group
+    = f.label :summary, '摘要', class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :summary, class: 'form-control'
+  .form-group
+    = f.label :author, '作者', class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :author, class: 'form-control'
+  .form-group
+    = f.label :view_count, '浏览量', class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.number_field :view_count, class: 'form-control'
+  .form-group
+    = f.label :image, '图片', class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :image, class: 'form-control'
+  .form-group
+    = f.label :tags, '标签', class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :tags, class: 'form-control'
+  /.form-group
+    = f.label :summary, '分类', class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.select(:category, options_for_select(@category_list)), class: 'form-control'
+
+  hr
+    .form-group
+      .col-sm-offset-2.col-sm-10
+        button.btn.btn-success type="submit"
+          span.glyphicon.glyphicon-floppy-save
+          |  保存
