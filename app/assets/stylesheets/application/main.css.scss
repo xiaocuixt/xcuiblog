@@ -1,0 +1,60 @@
+/* 全局 */
+img {
+  border: none;
+}
+button, p, a, h1, h2, h3, h4, h5, h6, form, ul, li {
+  margin: 0;
+  padding: 0;
+}
+a {
+  border: 0;
+  outline: 0;
+}
+ul, li {
+  list-style: none;
+}
+form {
+  display: inline;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+#header {
+  height: 90px;
+  overflow: hidden;
+  background: #fff;
+  .nav-bar {
+    overflow: hidden;
+    .logo {
+      height: 90px;
+      width: 90px;
+      float: left;
+    }
+    .title {
+      line-height: 90px;
+      margin-left: 25px;
+      color: #CACFD2;
+      float: left;
+    }
+    ul {
+      float: right;
+      line-height: 90px;
+      li {
+        float: left;
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: #BDC3C7;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
