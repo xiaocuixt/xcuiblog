@@ -1,28 +1,28 @@
-.admin-left-bar
-  = link_to '编辑', edit_admin_article_path(@article), class: 'btn btn-success'
-.admin-right-bar
-  table.table.table-hover.table-bordered
-    tr
-      th.col-sm-1 标题：
-      td = @article.title
-    tr
-      th 内容：
-      td = raw @article.content
-    tr
-      th 摘要：
-      td = raw @article.summary
-    tr
-      th 作者：
-      td = raw @article.author
-    tr
-      th 访问量：
-      td = raw @article.view_count
-    tr
-      th 图片：
-      td = raw @article.image
-    tr
-      th 标签：
-      td = @article.tags
-    tr
-      th 分类：
-      td = @article.category
+#main-content
+  .col-sm-10.col-sm-offset-2
+      = link_to '编辑', edit_admin_article_path(@article), class: 'btn btn-success'
+      table.table.table-hover.table-bordered
+        tr
+          th.col-sm-1 标题：
+          td = @article.title
+        tr
+          th 内容：
+          td = raw @article.content
+        tr
+          th 摘要：
+          td = raw @article.summary
+        tr
+          th 作者：
+          td = raw @article.author
+        tr
+          th 访问量：
+          td = raw @article.view_count
+        tr
+          th 图片：
+          td = raw @article.image
+        tr
+          th 标签：
+          td = @article.tags
+        tr
+          th 分类：
+          td = @article.category

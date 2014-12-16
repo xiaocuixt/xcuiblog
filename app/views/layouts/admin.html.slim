@@ -3,11 +3,10 @@ html
   head
     title xxx
     = stylesheet_link_tag    'admin',  media: 'all'
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'admin'
     = csrf_meta_tags
-
   body class="#{@page_is} #{@body_class} #{controller.controller_path.gsub('/','__')}__#{controller.action_name}"
-    /#header = render 'header'
-    #content
-      = yield
-    /#footer = render 'footer'
+    = render 'header'
+    = render 'left'
+    = yield
+    = render 'footer'

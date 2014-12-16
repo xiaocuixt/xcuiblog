@@ -1,12 +1,17 @@
-.admin-left-bar
-  = link_to '新建', new_admin_article_path, class: 'btn btn-success'
-.admin-right-bar
-  table.table.table-hover.table-bordered
-    thead
-      tr
-        th 标题
-        th 标签
-        th 分类
-        th.col-sm-1 colspan=3 操作
-    tbody
-      = render @articles
+#main-content
+  .col-sm-10.col-sm-offset-2
+    ol.breadcrumb
+      li
+        a href="#" 主页
+      li.active 菜单管理
+    = link_to '新建', new_admin_article_path, class: 'btn btn-success'
+    hr
+    table.table.table-hover.table-bordered
+      thead
+        tr
+          th 标题
+          th 标签
+          th 分类
+          th.col-sm-1 colspan=3 操作
+      tbody
+        = render @articles

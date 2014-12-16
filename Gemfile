@@ -48,3 +48,4 @@ gem 'rmagick'
 
 #分页工具
 gem 'will_paginate'
+gem 'bootstrap-sass', '~> 3.1.1'
