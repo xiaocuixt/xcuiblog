@@ -5,12 +5,12 @@
       = f.text_field :title, class: 'form-control'
   .form-group
     = f.label :content, '内容', class: 'col-sm-2 control-label'
-    .col-sm-4
-      = f.text_field :content, class: 'form-control'
+    .col-sm-8
+      = f.kindeditor  :content, class: 'form-control'
   .form-group
     = f.label :summary, '摘要', class: 'col-sm-2 control-label'
-    .col-sm-4
-      = f.text_field :summary, class: 'form-control'
+    .col-sm-8
+      = f.text_area :summary, size: "120x6", class: 'form-control'
   .form-group
     = f.label :author, '作者', class: 'col-sm-2 control-label'
     .col-sm-4

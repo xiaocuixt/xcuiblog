@@ -8,5 +8,11 @@ html
   body class="#{@page_is} #{@body_class} #{controller.controller_path.gsub('/','__')}__#{controller.action_name}"
     = render 'header'
     = render 'left'
-    = yield
+    #main-content
+      .col-sm-10.col-sm-offset-2
+        - if content_for? :nav
+          ol.breadcrumb == yield :nav
+        - if content_for? :toolbar
+          == yield :toolbar
+        = yield
     = render 'footer'

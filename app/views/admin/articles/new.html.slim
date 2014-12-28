@@ -1,9 +1,10 @@
-#main-content
-  .col-sm-10.col-sm-offset-2
-    ol.breadcrumb
-      li
-        a href="#" 主页
-      li.active 菜单管理
-    = link_to '新建', new_admin_article_path, class: 'btn btn-success'
-    hr
-    = render 'form'
+- content_for :nav
+  li
+    a href="#" 后台
+  li
+    a href="#" 文章列表
+  li.active 添加文章
+/- content_for :toolbar
+  = link_to '新建', new_admin_article_path, class: 'btn btn-success'
+hr
+= render 'form'

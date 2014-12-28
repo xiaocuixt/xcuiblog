@@ -1,4 +1,4 @@
-/* 全局 */
+lk/* 全局 */
 img {
   border: none;
 }
@@ -19,42 +19,75 @@ form {
 body {
   margin: 0;
   padding: 0;
+  font-size: 14px;
   font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
 
 .wrapper {
-  width: 960px;
+  width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 #header {
-  height: 90px;
-  overflow: hidden;
-  background: #fff;
-  .nav-bar {
+  height: 78px;
+  border-top: 8px solid #34495e;
+  .logo {
+    float: left;
+    display: block;
+  }
+  .title {
+    color: #d7dbdd;
+    float: left;
+    margin-top: 8px;
+    line-height: 78px;
+  }
+  ul {
     overflow: hidden;
-    .logo {
-      height: 90px;
-      width: 90px;
+    float: right;
+    li {
+      padding-top: 22px;
       float: left;
     }
-    .title {
-      line-height: 90px;
-      margin-left: 25px;
-      color: #CACFD2;
-      float: left;
+    a {
+      width: 100px;
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      display: block;
+      margin: 0 20px;
+      color: #bdc3c7;
+      text-decoration: none;
     }
-    ul {
+    a:hover {
+      background: #1abc9c;
+      color: #fff;
+      border-radius: 3px;
+    }
+  }
+}
+#nav-bg {
+  width: 1900px;
+  height: 283px;
+  background: image-url("nav-bg.png") no-repeat 0 0;
+}
+
+body.home__index {
+  .main-content {
+    margin-top: -100px;
+    background: #34495e;
+    overflow: hidden;
+    .left-content {
+      width: 770px;
+      background: #fff;
+      float: left;
+      padding: 30px;
+    }
+    .right-bar {
+      width: 310px;
+      padding-right: 30px;
+      height: 200px;
+      background: red;
       float: right;
-      line-height: 90px;
-      li {
-        float: left;
-        text-align: center;
-        a {
-          text-decoration: none;
-          color: #BDC3C7;
-          margin-left: 15px;
-        }
-      }
     }
   }
 }

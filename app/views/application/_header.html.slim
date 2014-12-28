@@ -1,9 +1,10 @@
-.wrapper
-  .nav-bar
-    .logo = link_to image_tag("logo.png"), '/'
+#header
+  .wrapper
+    .logo = link_to image_tag("logo.png"), root_path
     .title a simple life and fulture
     ul
       li class="#{ 'active' if controller.controller_path == 'home' && controller.action_name == 'index' }" = link_to '首页', '/'
       li = link_to '博客列表'
       li = link_to '旅行图片'
       li = link_to '关于作者'
+#nav-bg
