@@ -70,8 +70,10 @@ body {
   }
 }
 #footer {
-  height: 80px;
+  height: 40px;
   margin: 20px 0;
+  line-height: 40px;
+  color: #bdc3c7;
   text-align: center;
   background: #fff;
 }
@@ -81,6 +83,7 @@ body {
   padding: 15px;
   background: #fff;
   float: right;
+  margin-bottom: 20px;
   .author-avatar {
     background: #eee;
     padding: 20px 0;
@@ -117,7 +120,6 @@ body {
           height: 30px;
           line-height: 30px;
           border-bottom: 1px solid #eee;
-          text-align: center;
         }
         span, a {
           color: #7a7a7a;
@@ -148,6 +150,7 @@ body {
     }
   }
   .tab-contents {
+    min-height: 240px;
     ul.latest-articles, ul.latest-comments {
       display: none;
     }
@@ -178,7 +181,9 @@ body {
 }
 
 body.home__index,
-body.articles__show {
+body.articles__show,
+body.articles__list,
+body.articles__index {
   .main-content {
     width: 100%;
     background: #34495e image-url("nav-bg.png") no-repeat center 0;
@@ -191,6 +196,21 @@ body.articles__show {
         background: #fff;
         float: left;
         padding: 15px;
+        min-height: 746px;
+        margin-bottom: 20px;
+        .article-list-index {
+          li {
+            font-size: 14px;
+            line-height: 42px;
+            border-bottom: 1px dotted #eee;
+          }
+          li a {
+            color: #34495e;
+          }
+          span {
+            float: right;
+          }
+        }
         //文章show页面
         .article {
           min-height: 500px;
