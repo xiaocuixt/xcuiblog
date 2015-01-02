@@ -3,8 +3,18 @@
     .logo = link_to image_tag("logo.png"), root_path
     .title a simple life and fulture
     ul
-      li class="#{ 'active' if controller.controller_path == 'home' && controller.action_name == 'index' }" = link_to '首页', '/'
-      li = link_to '博客列表'
-      li = link_to '旅行图片'
-      li = link_to '关于作者'
-#nav-bg
+      li = link_to '首页', 'javascript:'
+      li = link_to '博客列表', 'javascript:'
+      li = link_to '旅行图片', 'javascript:'
+      li = link_to '关于作者', 'javascript:'
+
+javascript:
+  $(function(){
+    var o_li = $("#header .wrapper ul li");
+    o_li.eq(0).find("a").addClass("active");
+    o_li.each(function(){
+      $(this).find("a").click(function(){
+        $(this).addClass("active").parent().siblings().find("a").removeClass("active");
+      })
+    });
+  });

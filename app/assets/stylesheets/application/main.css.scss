@@ -1,6 +1,9 @@
-lk/* 全局 */
+/* 全局 */
 img {
-  border: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 }
 button, p, a, h1, h2, h3, h4, h5, h6, form, ul, li {
   margin: 0;
@@ -59,17 +62,12 @@ body {
       color: #bdc3c7;
       text-decoration: none;
     }
-    a:hover {
+    a.active, a:hover {
       background: #1abc9c;
       color: #fff;
       border-radius: 3px;
     }
   }
-}
-#nav-bg {
-  width: 1900px;
-  height: 283px;
-  background: image-url("nav-bg.png") no-repeat 0 0;
 }
 
 #right-bar {
@@ -176,66 +174,70 @@ body {
 body.home__index,
 body.articles__show {
   .main-content {
-    margin-top: -100px;
-    background: #34495e;
+    width: 100%;
+    background: #34495e image-url("nav-bg.png") no-repeat center 0;
     overflow: hidden;
-    .left-content {
-      width: 700px;
-      background: #fff;
-      float: left;
-      padding: 15px;
-      //文章show页面
-      .article {
-        min-height: 500px;
-        .article-title {
-          font-size: 20px;
-          line-height: 40px;
-          color: #34495e;
-          text-align: center;
-        }
-        .article-content {
-          color: #666;
-          line-height: 28px;
-        }
-      }
-      //文章index页面
-      .articles {
-        .article-info {
-          height: 20px;
-          margin: 10px 0;
-          width: 100%;
-          span {
-            width: 120px;
-            height: 16px;
-            padding-left: 30px;
-            color: #d6d9dc;
-            float: left;
-            display: block;
-            overflow: hidden;
-            &.time{
-              background: image-url("time.png") no-repeat 0 0;
-            }
-            &.comments{
-              background: image-url("comments.png") no-repeat 0 0;
-            }
-            &.sort {
-              background: image-url("sort.png") no-repeat 0 0;
-            }
-            &.view-count {
-              background: image-url("view-counts.png") no-repeat 0 0;
-            }
-          }
-        }
-        p {
-          &.title a {
+    .position-content{
+      margin-top: 140px;
+      overflow: hidden;
+      .left-content {
+        width: 700px;
+        background: #fff;
+        float: left;
+        padding: 15px;
+        //文章show页面
+        .article {
+          min-height: 500px;
+          .article-title {
+            font-size: 20px;
+            line-height: 40px;
             color: #34495e;
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 36px;
+            text-align: center;
           }
-          &.content {
+          .article-content {
             color: #666;
             line-height: 28px;
+          }
+        }
+        //文章index页面
+        .articles {
+          .article-info {
+            height: 20px;
+            margin: 10px 0;
+            width: 100%;
+            span {
+              width: 120px;
+              height: 16px;
+              padding-left: 30px;
+              color: #d6d9dc;
+              float: left;
+              display: block;
+              overflow: hidden;
+              &.time{
+                background: image-url("time.png") no-repeat 0 0;
+              }
+              &.comments{
+                background: image-url("comments.png") no-repeat 0 0;
+              }
+              &.sort {
+                background: image-url("sort.png") no-repeat 0 0;
+              }
+              &.view-count {
+                background: image-url("view-counts.png") no-repeat 0 0;
+              }
+            }
+          }
+          p {
+            &.title a {
+              color: #34495e;
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 36px;
+            }
+            &.content {
+              color: #666;
+              line-height: 28px;
+            }
           }
         }
       }
