@@ -4,5 +4,10 @@
       .left-content
         .article
           .article-title = @article.title
+          .article-info
+              span.time = @article.created_at.strftime("%Y-%m-%d")
+              span.comments = "20"
+              span.view-count = @article.view_count
+              span.sort = @article.category
           .article-content = raw @article.content
       = render 'right_bar'
