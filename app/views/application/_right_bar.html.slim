@@ -1,0 +1,65 @@
+#right-bar
+  .author-avatar
+    = link_to image_tag("avatar.jpg")
+  .block-content
+    h3 文章分类
+    .catagories
+      ul
+        li
+          = link_to "ruby on rails"
+          span
+            |(25)
+        li
+          = link_to "ruby on rails"
+          span
+            |(25)
+        li
+          = link_to "ruby on rails"
+          span
+            |(25)
+        li
+          = link_to "ruby on rails"
+          span
+            |(25)
+        li
+          = link_to "ruby on rails"
+          span
+            |(25)
+        li
+          = link_to "ruby on rails"
+          span
+            |(25)
+  .block-content
+    .tabs
+      = link_to '热门文章', 'javascript:'
+      = link_to '最新文章', 'javascript:'
+      = link_to '最新评论', 'javascript:'
+    .tab-contents
+      ul.hot-articles
+        - @articles.each do |article|
+          li
+            = link_to article.title[0..14], article
+            p.time = article.created_at.to_s(:db)
+      ul.latest-articles
+        - @articles.each do |article|
+          li
+            = link_to article.title[0..14], article
+            p.time = article.created_at.to_s(:db)
+      ul.latest-comments
+        li 文章不错，很有帮助,希望继续女里写作
+        li 希望继续女里写作
+        li fagsaggsg希hehhehhe望继续女里写作gasgd
+
+javascript:
+  $(function(){
+    var tab_a = $("#right-bar .block-content .tabs a");
+    var tab_content = $("#right-bar .block-content .tab-contents");
+    tab_a.eq(0).addClass("active").siblings().removeClass("active");
+    tab_a.each(function(index){
+      $_this = $(this);
+      $_this.hover(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+        tab_content.find("ul").eq(index).show().siblings().hide();
+      });
+    });
+  });

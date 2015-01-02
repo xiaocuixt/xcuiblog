@@ -4,7 +4,11 @@
       = image_tag("test2.jpg")
       .articles
         - @articles.each do |article|
-          = article.title
-          = raw article.content
-    .right-bar
-      p xxxxx
+          p.title = link_to article.title, article
+          .article-info
+            span.time = article.created_at.to_s(:db)
+            span.comments 20
+            span.sort = article.tags
+            span.view-count = article.view_count
+          p.content= raw article.content
+    = render 'right_bar'
