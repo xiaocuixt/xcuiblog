@@ -9,8 +9,8 @@
             .article-info
               span.time = article.created_at.strftime("%Y-%m-%d")
               span.comments = "20"
-              span.sort = article.category
               span.view-count = article.view_count
+              span.sort = article.category
             p.content= raw article.summary
             = will_paginate @articles, prev: 'mm', next_label: '下一页'
       = render 'right_bar'

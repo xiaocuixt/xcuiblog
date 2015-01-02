@@ -110,6 +110,9 @@ body {
         border: solid 1px #eee;
         margin: 0 5px;
       }
+      a:hover {
+        border: solid 1px #1abc9c;
+      }
     }
     .catagories {
       ul {
@@ -123,6 +126,10 @@ body {
         }
         span, a {
           color: #7a7a7a;
+        }
+        a:hover {
+          color: #1abc9c;
+          text-decoration: underline;
         }
       }
     }
@@ -171,6 +178,10 @@ body {
         line-height: 28px;
         display: block;
       }
+      a:hover {
+        color: #1abc9c;
+        text-decoration: underline;
+      }
       p.time {
         padding-left: 24px;
         color: #444444;
@@ -196,7 +207,7 @@ body.articles__index {
         background: #fff;
         float: left;
         padding: 15px;
-        min-height: 746px;
+        min-height: 749px;
         margin-bottom: 20px;
         .article-list-index {
           li {
@@ -206,6 +217,10 @@ body.articles__index {
           }
           li a {
             color: #34495e;
+          }
+          a:hover {
+            color: #1abc9c;
+            text-decoration: underline;
           }
           span {
             float: right;
@@ -222,6 +237,7 @@ body.articles__index {
           }
           .article-content {
             color: #666;
+            padding: 0 20px;
             line-height: 28px;
           }
         }
@@ -232,23 +248,27 @@ body.articles__index {
             margin: 10px 0;
             width: 100%;
             span {
-              width: 120px;
               height: 16px;
-              padding-left: 30px;
+              padding-left: 20px;
               color: #d6d9dc;
               float: left;
+              margin-right: 10px;
               display: block;
               overflow: hidden;
               &.time{
+                width: 80px;
                 background: image-url("time.png") no-repeat 0 0;
               }
               &.comments{
+                width: 20px;
                 background: image-url("comments.png") no-repeat 0 0;
               }
               &.sort {
+                width: 120px;
                 background: image-url("sort.png") no-repeat 0 0;
               }
               &.view-count {
+                width: 20px;
                 background: image-url("view-counts.png") no-repeat 0 0;
               }
             }
