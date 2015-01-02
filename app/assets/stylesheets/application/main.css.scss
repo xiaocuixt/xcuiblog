@@ -69,10 +69,16 @@ body {
     }
   }
 }
+#footer {
+  height: 80px;
+  margin: 20px 0;
+  text-align: center;
+  background: #fff;
+}
 
 #right-bar {
-  width: 255px;
-  padding: 15px 15px 15px 0;
+  width: 240px;
+  padding: 15px;
   background: #fff;
   float: right;
   .author-avatar {
@@ -228,6 +234,7 @@ body.articles__show {
             }
           }
           p {
+            margin-top: 10px;
             &.title a {
               color: #34495e;
               font-size: 18px;

@@ -27,10 +27,10 @@
     = f.label :tags, '标签', class: 'col-sm-2 control-label'
     .col-sm-4
       = f.text_field :tags, class: 'form-control'
-  /.form-group
-    = f.label :summary, '分类', class: 'col-sm-2 control-label'
+  .form-group
+    = f.label :category, '分类', class: 'col-sm-2 control-label'
     .col-sm-4
-      = f.select(:category, options_for_select(@category_list)), class: 'form-control'
+      = f.text_field :category, class: 'form-control'
 
   hr
     .form-group

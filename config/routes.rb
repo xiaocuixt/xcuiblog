@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
-  resources :articles, only: [:show]
+  resources :articles, only: [:index, :show] do
+    collection do
+      get :list
+    end
+  end
   namespace :admin do
     resources :articles
   end

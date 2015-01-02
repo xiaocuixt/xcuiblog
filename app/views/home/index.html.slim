@@ -8,8 +8,8 @@
             p.title = link_to article.title, article
             .article-info
               span.time = article.created_at.to_s(:db)
-              span.comments 20
-              span.sort = article.tags
+              span.comments = "20"
+              span.sort = article.category
               span.view-count = article.view_count
-            p.content= raw article.content
+            p.content= raw article.summary
       = render 'right_bar'

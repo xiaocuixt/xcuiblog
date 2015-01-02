@@ -3,36 +3,15 @@
     = link_to image_tag("avatar.jpg")
   .block-content
     .my-accounts
-      = link_to image_tag("weibo.png")
-      = link_to image_tag("github.png")
+      = link_to image_tag("weibo.png"), "http://weibo.com/u/1938705522/home"
+      = link_to image_tag("github.png"), "https://github.com/xiaocuixt"
   .block-content
     h3 文章分类
     .catagories
       ul
-        li
-          = link_to "ruby on rails"
-          span
-            |(25)
-        li
-          = link_to "ruby on rails"
-          span
-            |(25)
-        li
-          = link_to "ruby on rails"
-          span
-            |(25)
-        li
-          = link_to "ruby on rails"
-          span
-            |(25)
-        li
-          = link_to "ruby on rails"
-          span
-            |(25)
-        li
-          = link_to "ruby on rails"
-          span
-            |(25)
+        - @article_categories.each do |article_category|
+          li
+            = link_to article_category, list_articles_path(category: article_category)
   .block-content
     .tabs
       = link_to '热门文章', 'javascript:'
@@ -40,7 +19,7 @@
       = link_to '最新评论', 'javascript:'
     .tab-contents
       ul.hot-articles
-        - @articles.each do |article|
+        - @hot_articles.each do |article|
           li
             = link_to article.title[0..14], article
             p.time = article.created_at.to_s(:db)
