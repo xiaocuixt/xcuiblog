@@ -1,6 +1,10 @@
 .main-content
   .wrapper
     .left-content
-      = image_tag("test.png")
+      = image_tag("test2.jpg")
+      .articles
+        - @articles.each do |article|
+          = article.title
+          = raw article.content
     .right-bar
       p xxxxx
