@@ -8,7 +8,7 @@ class CreateArticles < ActiveRecord::Migration
       t.string :category
       t.string :image
       t.string :summary
-      t.integer :view_count
+      t.integer :view_count, default: 0
 
       t.timestamps
     end

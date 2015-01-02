@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20141215151209) do
     t.string   "category"
     t.string   "image"
     t.string   "summary"
-    t.integer  "view_count"
+    t.integer  "view_count", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
