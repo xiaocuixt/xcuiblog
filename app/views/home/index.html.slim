@@ -12,4 +12,5 @@
               span.sort = article.category
               span.view-count = article.view_count
             p.content= raw article.summary
+            = will_paginate @articles, prev: 'mm', next_label: '下一页'
       = render 'right_bar'

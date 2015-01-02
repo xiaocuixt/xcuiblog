@@ -271,3 +271,41 @@ body.articles__index {
     }
   }
 }
+.pagination {
+  overflow: hidden;
+  text-align: center;
+  em.current {
+    background: #1abc9c;
+    color: #fff!important;
+    display: block;
+  }
+  span.next_page.disabled, span.previous_page.disabled {
+    display: none;
+  }
+  em.current, a {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 5px;
+    margin: 0 3px;
+    color: #666;
+    border: solid #eee 1px;
+    display:inline-block;
+    zoom:1;
+    *display:inline;
+    &:hover {
+      background: #1abc9c;
+      color: #fff;
+    }
+    &.next_page, &.previous_page {
+      width: 100px;
+    }
+    &.next_page {
+      margin-left: 5px;
+    }
+     &.previous_page {
+       margin-right: 5px;
+     }
+  }
+}
