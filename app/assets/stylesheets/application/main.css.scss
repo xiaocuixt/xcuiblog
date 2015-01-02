@@ -95,6 +95,15 @@ body {
       padding-left: 10px;
       border-left: solid 3px #1abc9c;
     }
+    .my-accounts {
+      overflow: hidden;
+      a {
+        float: left;
+        display: block;
+        border: solid 1px #eee;
+        margin: 0 5px;
+      }
+    }
     .catagories {
       ul {
         overflow: hidden;
@@ -157,6 +166,7 @@ body {
       }
       p.time {
         padding-left: 24px;
+        color: #444444;
         background: image-url("time.png") no-repeat 0 0;
       }
     }
