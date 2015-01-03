@@ -12,6 +12,10 @@
         - @article_categories.each do |article_category|
           li
             = link_to article_category, list_articles_path(category: article_category)
+            span
+              |(
+              = Article.where(category: article_category).size
+              |)
   .block-content
     .tabs
       = link_to '热门文章', 'javascript:'
