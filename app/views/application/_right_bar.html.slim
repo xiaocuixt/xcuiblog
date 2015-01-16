@@ -40,15 +40,30 @@
         li fagsaggsg希hehhehhe望继续
 
 javascript:
-  $(function(){
-    var tab_a = $("#right-bar .block-content .tabs a");
-    var tab_content = $("#right-bar .block-content .tab-contents");
-    tab_a.eq(0).addClass("active").siblings().removeClass("active");
-    tab_a.each(function(index){
-      $_this = $(this);
-      $_this.hover(function(){
-        $(this).addClass("active").siblings().removeClass("active");
-        tab_content.find("ul").eq(index).show().siblings().hide();
+  (function(){
+    _toggle_tabs = function(){
+      var tab_a = $("#right-bar .block-content .tabs a");
+      var tab_content = $("#right-bar .block-content .tab-contents");
+      tab_a.eq(0).addClass("active").siblings().removeClass("active");
+      tab_a.each(function(index){
+        $_this = $(this);
+        $_this.hover(function(){
+          $(this).addClass("active").siblings().removeClass("active");
+          tab_content.find("ul").eq(index).show().siblings().hide();
+        });
+      });
+    }
+    $(function(){
+      _toggle_tabs();
+      $(window).scroll(function(){
+        var _right_bar = $("#right-bar");
+        if($(window).scrollTop() >= 260) {
+          _right_bar.addClass("fix");
+        }
+        else
+        {
+          _right_bar.removeClass("fix");
+        }
       });
     });
-  });
+  }).call(this);

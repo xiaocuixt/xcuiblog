@@ -79,11 +79,18 @@ body {
 }
 
 #right-bar {
-  width: 240px;
+  width: 230px;
   padding: 15px;
   background: #fff;
   float: right;
   margin-bottom: 20px;
+  margin-left: 5px;
+  &.fix {
+    position:fixed;
+    left:50%;
+    margin-left:240px;
+    bottom:100px;
+  }
   .author-avatar {
     background: #eee;
     padding: 20px 0;
@@ -96,8 +103,9 @@ body {
     margin-top: 20px;
     overflow: hidden;
     h3 {
-      font-size: 16px;
+      font-size: 14px;
       color: #34495e;
+      line-height: 14px;
       margin: 10px 0;
       padding-left: 10px;
       border-left: solid 3px #1abc9c;
@@ -118,10 +126,9 @@ body {
       ul {
         overflow: hidden;
         li {
-          width: 50%;
-          float: left;
           height: 30px;
           line-height: 30px;
+          padding: 0 10px;
           border-bottom: 1px solid #eee;
           span {
             float: right;
@@ -143,7 +150,7 @@ body {
       height: 40px;
       line-height: 40px;
       text-align: center;
-      width: 30.3333%;
+      width: 32.3333%;
       margin: 0 0.5%;
       background: #ebeef2;
       color: #47525d;
@@ -161,6 +168,9 @@ body {
   }
   .tab-contents {
     min-height: 240px;
+    ul {
+      padding: 0 5px;
+    }
     ul.latest-articles, ul.latest-comments {
       display: none;
     }
