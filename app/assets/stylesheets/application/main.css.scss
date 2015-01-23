@@ -79,18 +79,11 @@ body {
 }
 
 #right-bar {
-  width: 230px;
+  width: 240px;
   padding: 15px;
   background: #fff;
   float: right;
   margin-bottom: 20px;
-  margin-left: 5px;
-  &.fix {
-    position:fixed;
-    left:50%;
-    margin-left:240px;
-    bottom:100px;
-  }
   .author-avatar {
     background: #eee;
     padding: 20px 0;
@@ -213,7 +206,7 @@ body.articles__index {
     background: #34495e image-url("nav-bg.png") no-repeat center 0;
     overflow: hidden;
     .position-content{
-      margin-top: 140px;
+      margin-top: 80px;
       overflow: hidden;
       .left-content {
         width: 700px;

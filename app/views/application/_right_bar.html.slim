@@ -1,6 +1,6 @@
 #right-bar
   .author-avatar
-    = link_to image_tag("avatar.jpg")
+    = link_to image_tag("avatar.png")
   .block-content
     .my-accounts
       = link_to image_tag("weibo.png"), "http://weibo.com/u/1938705522/home", target: '_blank'
@@ -55,15 +55,5 @@ javascript:
     }
     $(function(){
       _toggle_tabs();
-      $(window).scroll(function(){
-        var _right_bar = $("#right-bar");
-        if($(window).scrollTop() >= 260) {
-          _right_bar.addClass("fix");
-        }
-        else
-        {
-          _right_bar.removeClass("fix");
-        }
-      });
     });
   }).call(this);
