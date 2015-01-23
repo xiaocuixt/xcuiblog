@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: xcuiblog_production
-  username: xcuiblog
-  password: <%= ENV['XCUIBLOG_DATABASE_PASSWORD'] %>
+  username: xiaocui
+  password: mypass123
