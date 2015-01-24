@@ -2,9 +2,7 @@
   li
     a href="#" 后台
   li
-    a href="#" 文章列表
+    = link_to "文章列表", admin_articles_path
   li.active 添加文章
-/- content_for :toolbar
-  = link_to '新建', new_admin_article_path, class: 'btn btn-success'
 hr
 = render 'form'

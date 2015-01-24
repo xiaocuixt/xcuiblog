@@ -1,4 +1,8 @@
-#main-content
-  .col-sm-10.col-sm-offset-2
-    h1 编辑
-    = render 'form'
+- content_for :nav
+  li
+    a href="#" 后台
+  li
+    = link_to "文章列表", edit_admin_article_path(@article)
+  li.active 编辑
+hr
+= render 'form'

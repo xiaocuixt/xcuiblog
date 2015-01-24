@@ -1,14 +1,13 @@
+- if controller.controller_path == 'admin/articles' && controller.action_name == 'index'
+  - active_articles = true
 #left-bar.col-sm-2
   ul#xcui-menu
     li
-      a href=""  target="" 首页
+      = link_to 'javascript:' do
+        i.glyphicon.glyphicon-home
+        |  后台
       ul
         li
-          a href="#{admin_articles_path}" 文章列表
-    /li
-      a href=""  target="" 成员管理
-      ul
-        li
-          a href="" target="" 后台菜单管理
-          a href="" target="" 展示商品管理
-          a href="" target="" 数据管理
+          = link_to admin_articles_path, class: "#{active_articles ? 'active' : ''}" do
+            i.glyphicon.glyphicon-th-list
+            |  博客文章

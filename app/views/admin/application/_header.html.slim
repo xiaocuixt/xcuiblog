@@ -1,9 +1,14 @@
 header
   nav.navbar.navbar-inverse role="navigation"
-    p.navbar-text 小崔博客管理后台
+    p.navbar-text
+      = link_to "javascript:" do
+        i.glyphicon.glyphicon-home
+        |  小崔博客管理后台
     ul.nav.navbar-nav.navbar-right
       li.dropdown
-        a href="#" class="dropdown-toggle" data-toggle="dropdown" 管理员
+        a href="#" class="dropdown-toggle" data-toggle="dropdown"
+          i.glyphicon.glyphicon-user
+          |  管理员
         ul class="dropdown-menu" role="menu"
           li
             a href="#" 个人中心
