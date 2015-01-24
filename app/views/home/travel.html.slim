@@ -1,0 +1,10 @@
+.main-content
+  .wrapper
+    .position-content
+      .left-content
+        .article-list-index
+          - @articles.each do |article|
+            li
+              = link_to article.title, article
+              span = article.created_at.strftime("%Y-%m-%d")
+      = render 'right_bar'

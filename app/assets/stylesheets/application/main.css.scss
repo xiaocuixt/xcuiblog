@@ -61,11 +61,25 @@ body {
       margin: 0 20px;
       color: #bdc3c7;
       text-decoration: none;
+      /*圆角*/
+      -webkit-border-radius:34px;
+      -moz-border-radius:34px;
+      border-radius:34px;
+      /*过渡*/
+      -webkit-transition:all 0.2s ease-in-out;
+      -moz-transition:all 0.2s ease-in-out;
+      -o-transition:all 0.2s ease-in-out;
+      transition:all 0.2s ease-in-out;
     }
     a.active, a:hover {
       background: #1abc9c;
       color: #fff;
-      border-radius: 3px;
+      -webkit-border-radius:34px;
+      -moz-border-radius:34px;
+      border-radius:34px;
+      -webkit-box-shadow: 0 20px 10px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 0 20px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 20px 10px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -79,16 +93,27 @@ body {
 }
 
 #right-bar {
-  width: 240px;
+  width: 239px;
   padding: 15px;
   background: #fff;
   float: right;
   margin-bottom: 20px;
+  border-left: dotted 1px #1ABC9C;
   .author-avatar {
     background: #eee;
     a img {
       margin: 0 auto;
       display: block;
+      /*添加阴影*/
+      -webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+      -moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+    }
+    img:hover {
+      -webkit-transform: scale(1.5)tranlate(20px, 40px);
+      -moz-transform: scale(1.5)tranlate(20px, 40px);
+      -o-transform: scale(1.5)tranlate(20px, 40px);
+      transform:scale(1.5)tranlate(20px, 40px);
     }
   }
   .block-content {
@@ -109,9 +134,14 @@ body {
         display: block;
         border: solid 1px #eee;
         margin: 0 5px;
-      }
-      a:hover {
-        border: solid 1px #1abc9c;
+        -webkit-transform: scale(1.5)tranlate(20px, 40px);
+        -moz-transform: scale(1.5)tranlate(20px, 40px);
+        -o-transform: scale(1.5)tranlate(20px, 40px);
+        transform:scale(1.5)tranlate(20px, 40px);
+        /*添加阴影*/
+        -webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+        -moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
+        box-shadow: 4px 4px 10px rgba(0,0,0,0.5);
       }
     }
     .catagories {
@@ -199,7 +229,9 @@ body {
 body.home__index,
 body.articles__show,
 body.articles__list,
-body.articles__index {
+body.articles__index,
+body.home__travel,
+body.home__about {
   .main-content {
     width: 100%;
     background: #34495e image-url("nav-bg.png") no-repeat center 0;
@@ -212,7 +244,7 @@ body.articles__index {
         background: #fff;
         float: left;
         padding: 15px;
-        min-height: 749px;
+        min-height: 864px;
         margin-bottom: 20px;
         .article-list-index {
           li {
@@ -282,6 +314,8 @@ body.articles__index {
         .articles {
           p {
             margin-top: 10px;
+            -ms-word-wrap: break-word;
+                word-wrap: break-word;
             &.title a {
               color: #34495e;
               font-size: 18px;

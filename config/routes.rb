@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
+  get '/about', to: 'home#about',  as: :about
+  get '/travel', to: 'home#travel', as: :travel
   resources :articles, only: [:index, :show] do
     collection do
       get :list

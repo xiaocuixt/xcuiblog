@@ -1,20 +1,17 @@
+- if controller.controller_path == "home" && controller.action_name == "index"
+  - active_index = true
+- if controller.controller_path == "articles" && controller.action_name == "index"
+  - active_articles = true
+- if controller.controller_path == "home" && controller.action_name == "travel"
+  - active_travel = true
+- if controller.controller_path == "home" && controller.action_name == "about"
+  - active_about = true
 #header
   .wrapper
     .logo = link_to image_tag("logo.png"), root_path
     .title a simple life and fulture
     ul
-      li = link_to '首页', root_path
-      li = link_to '博客列表', articles_path
-      li = link_to '生活＆旅行', 'javascript:'
-      li = link_to '关于我', 'javascript:'
-
-/javascript:
-  $(function(){
-    var o_li = $("#header .wrapper ul li");
-    o_li.eq(0).find("a").addClass("active");
-    o_li.each(function(){
-      $(this).find("a").click(function(){
-        $(this).addClass("active").parent().siblings().find("a").removeClass("active");
-      })
-    });
-  });
+      li = link_to '首页', root_path, class: "#{active_index ? 'active' : ''}"
+      li = link_to '博客列表', articles_path, class: "#{active_articles ? 'active' : ''}"
+      li = link_to '生活＆旅行', travel_path, class: "#{active_travel ? 'active' : ''}"
+      li = link_to '关于我', about_path, class: "#{active_about ? 'active' : ''}"
